@@ -1,0 +1,106 @@
+\documentclass[11pt, a4paper]{moderncv}
+
+\moderncvtheme[black]{classic}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.9]{geometry}
+\recomputelengths
+
+\newcommand{\myentry}[5]{\cventry{#1}{#2}{\newline{}#3}{#4}{#5}}
+
+\firstname{Taylor}
+\familyname{Pool}
+\phone{(336) 541-4635}
+\email{taylorpool.27@gmail.com}
+\social[github]{taylorpool}
+\social[linkedin]{taylorpool}
+\social[orcid]{0009-0006-5190-5936}
+
+\begin{document}
+
+\maketitle
+
+\section{Education}
+
+\myentry{May 2022 - May 2024}
+{Master of Science: Robotics}
+{Carnegie Mellon University}
+{Pittsburgh, PA}
+{}
+{}
+
+\myentry{Aug 2016 - Sep 2022}
+{Bachelor of Science: Applied Mathematics}
+{Brigham Young University}
+{Provo, UT}
+{\textit{Summa Cum Laude}}
+{}
+
+\section{Experience}
+
+\myentry{May 2023 - Present}
+{Roboticist: Full Stack}
+{Aquatonomy}
+{Pittsburgh, PA}
+{}
+{
+	\begin{itemize}
+		\item Developed middleware solution for gigabit-ethernet cameras, IMU, DVL, and leak detector
+	\end{itemize}
+}
+
+\myentry{May 2022 - Present}
+{Graduate Researcher: Robot Perception Laboratory}
+{Carnegie Mellon University}
+{Pittsburgh, PA}
+{}
+{
+	\begin{itemize}
+		\item Developed LIDAR-Inertial Odometry fusion for US Military
+	\end{itemize}
+}
+
+
+\myentry{May 2021 - Aug 2021}
+{Intern: Trajectory Management and Controls}
+{Shield AI}
+{San Diego, CA}
+{}
+{
+	\begin{itemize}
+		\item Boosted speed and stability of Nova 2 flight by implementing on-manifold geometric controller
+		\item Eliminated tracking errors over high-speed trajectories via online system-identification
+	\end{itemize}
+}
+
+
+\myentry{May 2020 - Aug 2020}
+{Intern: Unmanned Aerial Vehicle Group}
+{Lawrence Livermore National Laboratory}
+{Livermore, CA}
+{}
+{
+	\begin{itemize}
+		\item Saved division 20,000/year by constructing RTK-GPS ground truth system
+		\item Implemented collision avoidance algorithm inside of multi-agent simulations
+	\end{itemize}
+}
+
+
+\section{Skills}
+
+\cvlistdoubleitem{C++}{Python}
+\cvlistdoubleitem{Linear Algebra}{Control Theory}
+\cvlistdoubleitem{State Estimation}{Optimization}
+\cvlistdoubleitem{ROS}{Middleware}
+\cvlistdoubleitem{Computer Vision}{Model Predictive Control}
+\cvlistdoubleitem{Multi-Agent Teaming}{Collision Avoidance}
+
+\section{Publications}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{reservoir.bibtex}
+
+\end{document}
