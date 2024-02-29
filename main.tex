@@ -7,7 +7,7 @@
 \usepackage[scale=0.9]{geometry}
 \recomputelengths
 
-\usepackage[maxnames=10]{biblatex}
+\usepackage[maxnames=10, eprint=false]{biblatex}
 
 \defbibenvironment{bibliography}
   {\list
@@ -77,26 +77,26 @@
 {}
 {
 	\begin{itemize}
-		\item Developed middleware solution for gigabit-ethernet cameras, IMU, DVL, and leak detector
-		\item More here
+		\item Produced millimeter-accurate models of underwater structures via stereo vision and IMU data
+		\item Logged and visualized multimodel sensor information for safe operation of robot
 	\end{itemize}
 }
 
 \myentry{May 2022 - Present}
-{Graduate Researcher: Robot Perception Laboratory}
+{AI Graduate Researcher: Robot Perception Laboratory}
 {Carnegie Mellon University}
 {Pittsburgh, PA}
 {}
 {
 	\begin{itemize}
-		\item Developed LIDAR-Inertial Odometry fusion for US Military
-		\item More here
+		\item Supervised state-of-the-art fusion of IMU, LIDAR, and GPS for DARPA RACER competition
+		\item Increased robustness of robot state estimation in degraded environments by 50\%
 	\end{itemize}
 }
 
 
 \myentry{May 2021 - Aug 2021}
-{Intern: Trajectory Management and Controls Team}
+{AI Intern: Trajectory Management and Controls Team}
 {Shield AI}
 {San Diego, CA}
 {}
@@ -109,27 +109,37 @@
 
 
 \myentry{May 2020 - Aug 2020}
-{Intern: Unmanned Aerial Vehicle Group}
+{Engineering Intern: Unmanned Aerial Vehicle Group}
 {Lawrence Livermore National Laboratory}
 {Livermore, CA}
 {}
 {
 	\begin{itemize}
-		\item Saved division 20,000/year by constructing RTK-GPS ground truth system
-		\item Implemented collision avoidance algorithm inside of multi-agent simulations
+		\item Saved division \$20,000/year by constructing inexpensive RTK-GPS ground truth system
+		\item Enabled future missions by implementing collision avoidance technology within simulation
+	\end{itemize}
+}
+
+\myentry{Aug 2019 - May 2022}
+{Researcher: Multiple Agent Intelligent Coordination and Control Laboratory}
+{Brigham Young University}
+{Provo, UT}
+{}
+{
+	\begin{itemize}
+		\item Developed dynamic models of eVTOL aircraft for simulation within Unreal Engine workflow
 	\end{itemize}
 }
 
 
 \section{Skills}
 
-\cvlistdoubleitem{C++}{Python}
-\cvlistdoubleitem{Linear Algebra}{Control Theory}
-\cvlistdoubleitem{State Estimation}{Optimization}
-\cvlistdoubleitem{ROS}{Middleware}
+\cvlistdoubleitem{State Estimation}{Control Theory}
+\cvlistdoubleitem{Linear Algebra}{Optimization}
+\cvlistdoubleitem{Lie Theory}{Collision Avoidance}
 \cvlistdoubleitem{Computer Vision}{Model Predictive Control}
-\cvlistdoubleitem{Multi-Agent Teaming}{Collision Avoidance}
-
+\cvlistdoubleitem{ISO C++}{Python}
+\cvlistdoubleitem{ROS}{POSIX Sockets}
 
 \nocite{*}
 \printbibliography[title=Publications]
