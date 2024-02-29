@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper]{moderncv}
+\documentclass[12pt, a4paper]{moderncv}
 
 \moderncvtheme[black]{classic}
 
@@ -6,6 +6,37 @@
 
 \usepackage[scale=0.9]{geometry}
 \recomputelengths
+
+\usepackage[maxnames=10]{biblatex}
+
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{% label format from numeric.bbx
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+     {\setlength{\topsep}{0pt}% layout parameters from moderncvstyleclassic.sty
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
+\addbibresource{reservoir.bibtex}
+
+% the following definition is from the file moderncvstyleclassic.sty
+\renewcommand*{\cventry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {\bfseries#3}%
+%   \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% I changed this line (with comma) ...
+    \ifthenelse{\equal{#4}{}}{}{ {\slshape#4}}% ... into this one (without comma).
+    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#6}{}}{}{, #6}%
+    .\strut%
+    \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+%%%
 
 \newcommand{\myentry}[5]{\cventry{#1}{#2}{\newline{}#3}{#4}{#5}}
 
@@ -47,6 +78,7 @@
 {
 	\begin{itemize}
 		\item Developed middleware solution for gigabit-ethernet cameras, IMU, DVL, and leak detector
+		\item More here
 	\end{itemize}
 }
 
@@ -58,12 +90,13 @@
 {
 	\begin{itemize}
 		\item Developed LIDAR-Inertial Odometry fusion for US Military
+		\item More here
 	\end{itemize}
 }
 
 
 \myentry{May 2021 - Aug 2021}
-{Intern: Trajectory Management and Controls}
+{Intern: Trajectory Management and Controls Team}
 {Shield AI}
 {San Diego, CA}
 {}
@@ -97,10 +130,8 @@
 \cvlistdoubleitem{Computer Vision}{Model Predictive Control}
 \cvlistdoubleitem{Multi-Agent Teaming}{Collision Avoidance}
 
-\section{Publications}
 
 \nocite{*}
-\bibliographystyle{plain}
-\bibliography{reservoir.bibtex}
+\printbibliography[title=Publications]
 
 \end{document}
